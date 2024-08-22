@@ -1,4 +1,4 @@
-Solar Radiation Measurement Data Analysis
+# Solar Radiation Measurement Data Analysis
 
 This project provides a comprehensive analysis of solar radiation data to support MoonLight Energy Solutions' strategic approach for solar investments. It leverages Python's powerful data analysis libraries (pandas, NumPy, matplotlib, seaborn) to extract insights through Exploratory Data Analysis (EDA) and visualization techniques.
 
@@ -10,10 +10,16 @@ Gain insights into how cleaning events affect solar sensor readings.
 Support data-driven decision-making for MoonLight Energy's sustainability goals.
 
 
-Prerequisites:
-# describe each of libraries with functionalities in this project
-pandas (pip install pandas)
-NumPy (pip install numpy)
-matplotlib (pip install matplotlib)
-seaborn (pip install seaborn)
-scipy (pip install scipy) # for Z-score calculation
+
+# The libraries used in solar radiation analysis:
+
+# pandas: 
+Loading, cleaning, manipulating, and analyzing the solar radiation data.
+# NumPy: 
+Performing numerical calculations, such as statistical analysis and correlation.
+# matplotlib: 
+Creating visualizations like time series plots, heatmaps, and scatter plots to explore the data.
+# seaborn: 
+Generating statistical visualizations and enhancing plot aesthetics.
+# scipy: 
+Calculating Z-scores for outlier detection and performing other statistical operations.
