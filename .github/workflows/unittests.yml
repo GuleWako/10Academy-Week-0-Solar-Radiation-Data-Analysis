@@ -22,12 +22,3 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pandas numpy matplotlib seaborn scipy
-
-    - name: Run analysis
-      # run: python solar_radiation_analysis.py
-
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: analysis-results
-        path: output
