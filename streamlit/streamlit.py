@@ -3,13 +3,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-st.header("Solar radiation Mesurements for MoonLight Energy Solutions", divider='rainbow')
+
+st.markdown(
+    """
+    <h1 style=' font-size: 20px; font-weight: bold; color: #eb344c;'>Solar Radiation Measurements For MoonLight Energy Solutions</h1>
+    """,
+    unsafe_allow_html=True
+)
 with st.sidebar:
     st.header("Solar Radiations")
-    add_selectbox = st.sidebar.selectbox(
-    "Select City to see his solar radiation measurement",
+    selected_country = st.sidebar.selectbox(
+    "Select a country",
     ("Benin", "Sierra Leone", "Togo")
     )
-
-
-
+st.write(selected_country)
