@@ -15,7 +15,7 @@ def readData(data):
         print("No data with this name")
 
 # Function to create a box plot for identifying outliers
-def boxPlotForIdentifyOutlier(data):
+def boxPlotForIdentifyOutlier(data,ax):
     sns.boxplot(data=data[['DNI', 'GHI', 'DHI']], orient='v')
     plt.title('Box Plot of Solar Radiation Data')
     plt.xlabel('Values')
