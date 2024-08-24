@@ -6,7 +6,7 @@ import streamlit as st
 
 import sys
 sys.path.append('..')
-from scripts.solarRadiationData import readData,boxPlotForIdentifyOutlier,replaceNegativeWithZero,removeOutliersWinsorization,solarRadiationsOvertime
+from scripts.solarRadiationData import readData,boxPlotForIdentifyOutlier,replaceNegativeWithZero,removeOutliersWinsorization,solarRadiationsOvertime,evaluateImpactofCleaningOvertime,correlationBetweenSolarRadiationandTemperature,correlationBetweenSolarRadiationandWind,windAnalysiswithWindspeedAndWindDirection,examineRelativeHumidityInfluenceTempAndSolarRadiation,freqDesForSolarRadWSandTempUsingHistogram
 
 
 st.markdown(
@@ -73,7 +73,7 @@ st.pyplot(fig)
 
 st.header("Time Series Analysis of Solar Radiation")
 st.divider()
-# st.pyplot(solarRadiationsOvertime(data))
+st.pyplot(solarRadiationsOvertime(data))
 
 
 cleaned_data = data[data['Cleaning'] == 1]
@@ -81,3 +81,29 @@ uncleaned_data = data[data['Cleaning'] == 0]
 st.header("Cleaned Data")
 st.divider()
 st.write(cleaned_data.head())
+
+st.header("Impact of Cleaning data overTime")
+st.divider()
+st.pyplot(evaluateImpactofCleaningOvertime(cleaned_data, uncleaned_data))
+
+
+st.header("Correlation Between Solar Radiation and Temperature")
+st.divider()
+st.pyplot(correlationBetweenSolarRadiationandTemperature(data))
+
+st.header("Correlation Between Solar Radiation and Winds")
+st.divider()
+st.pyplot(correlationBetweenSolarRadiationandWind(data))
+
+st.header("Wind Analysis With Wind Speed And Wind Direction")
+st.divider()
+st.pyplot(windAnalysiswithWindspeedAndWindDirection(data))
+
+st.header("Relative Humidity Influence Temp and Solar Radiation")
+st.divider()
+st.pyplot(examineRelativeHumidityInfluenceTempAndSolarRadiation(data))
+
+
+st.header("Frequency distribution of Solar Radiation, wind speed and Temp")
+st.divider()
+st.pyplot(freqDesForSolarRadWSandTempUsingHistogram(data))
