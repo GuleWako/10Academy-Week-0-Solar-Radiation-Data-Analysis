@@ -3,8 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-st.title("Steamlit App")
-st.write("Hello world")
-data=pd.DataFrame(np.random.randn(20,4),
-             columns=['A','B','C','D'])
-st.line_chart(data)
+st.header("Solar radiation Mesurements for MoonLight Energy Solutions", divider='rainbow')
+with st.sidebar:
+    st.header("Solar Radiations")
+    add_selectbox = st.sidebar.selectbox(
+    "Select City to see his solar radiation measurement",
+    ("Benin", "Sierra Leone", "Togo")
+    )
+
+
+

@@ -1,3 +1,13 @@
+def readData(data):
+    if data=='Benin':
+        return '../data/benin-malanville.csv'
+    elif data=='Sierra Leone':
+        return '../data/sierraleone-bumbuna.csv'
+    elif data =='Togo':
+        return '../data/togo-dapaong_qc.csv'
+    else:
+        print("No data with this name")
+
 def CheckOutLiers(data, column_name):
     q1 = data[column_name].quantile(0.25)
     q3 = data[column_name].quantile(0.75)
