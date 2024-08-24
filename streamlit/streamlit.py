@@ -7,11 +7,11 @@ import streamlit as st
 # Function to read data from a CSV file based on country name
 def readData(data):
     if data=='Benin':
-        return '../data/benin-malanville.csv'
+        return 'data/benin-malanville.csv'
     elif data=='Sierra Leone':
-        return '../data/sierraleone-bumbuna.csv'
+        return 'data/sierraleone-bumbuna.csv'
     elif data =='Togo':
-        return '../data/togo-dapaong_qc.csv'
+        return 'data/togo-dapaong_qc.csv'
     else:
         print("No data with this name")
 
